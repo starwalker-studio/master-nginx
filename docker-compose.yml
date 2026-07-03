@@ -1,0 +1,15 @@
+services:
+  nginx-master:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    container_name: nginx-master
+    ports:
+      - "80:80"
+    networks:
+      - proxy-network
+    restart: unless-stopped
+
+networks:
+  proxy-network:
+    driver: bridge
