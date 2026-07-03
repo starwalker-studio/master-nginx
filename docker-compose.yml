@@ -12,4 +12,5 @@ services:
 
 networks:
   proxy-network:
+    name: proxy-network
     driver: bridge
