@@ -9,13 +9,6 @@ pipeline {
             }
         }
 
-        stage('Crear red compartida') {
-            steps {
-                echo 'Creando red proxy-network si no existe...'
-                sh 'docker network create proxy-network || true'
-            }
-        }
-
         stage('Construir imagen') {
             steps {
                 echo 'Construyendo imagen de Nginx master...'
